@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Grid View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageGridViewController" customModule="CropNine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zsM-xG-1Se">
+                                <rect key="frame" x="8" y="44" width="398" height="398"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="en5-SV-4uZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="398"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e00-2v-f5W">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGZ-aa-mdO">
+                                                <rect key="frame" x="0.0" y="134" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-pV-5oS">
+                                                <rect key="frame" x="0.0" y="268" width="130" height="130"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4em-MU-Yni">
+                                        <rect key="frame" x="134" y="0.0" width="130" height="398"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-WW-8GA">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Rg-vz6">
+                                                <rect key="frame" x="0.0" y="134" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-L5-2IN">
+                                                <rect key="frame" x="0.0" y="268" width="130" height="130"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1jc-Ec-51g">
+                                        <rect key="frame" x="268" y="0.0" width="130" height="398"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ce-Es-DNf">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQD-rZ-jgs">
+                                                <rect key="frame" x="0.0" y="134" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b3L-xd-wiO">
+                                                <rect key="frame" x="0.0" y="268" width="130" height="130"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zsM-xG-1Se" secondAttribute="height" multiplier="1:1" id="h0U-68-Q9s"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgH-Eg-CJL">
+                                <rect key="frame" x="8" y="782" width="398" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dsB-gG-Qhs"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hor-fY-D4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QgH-Eg-CJL" secondAttribute="trailing" constant="8" id="7Iu-Ts-Mnp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QgH-Eg-CJL" secondAttribute="bottom" constant="20" id="E8r-Z2-2Pg"/>
+                            <constraint firstItem="zsM-xG-1Se" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Pw0-pC-Pta"/>
+                            <constraint firstItem="zsM-xG-1Se" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="afd-eK-YwJ"/>
+                            <constraint firstAttribute="trailing" secondItem="zsM-xG-1Se" secondAttribute="trailing" constant="8" id="cIe-XY-r6E"/>
+                            <constraint firstItem="QgH-Eg-CJL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jRL-JI-iAb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="im1" destination="e00-2v-f5W" id="CHB-Hc-7e6"/>
+                        <outlet property="im2" destination="3aa-WW-8GA" id="cQS-3V-ocx"/>
+                        <outlet property="im3" destination="6ce-Es-DNf" id="mhG-05-aeg"/>
+                        <outlet property="im4" destination="CGZ-aa-mdO" id="fND-RZ-Uqo"/>
+                        <outlet property="im5" destination="GxD-Rg-vz6" id="g1T-Nc-f8k"/>
+                        <outlet property="im6" destination="hQD-rZ-jgs" id="VBb-pM-Cvu"/>
+                        <outlet property="im7" destination="lr9-pV-5oS" id="aVm-4J-uBr"/>
+                        <outlet property="im8" destination="MTo-L5-2IN" id="SkK-HJ-nQl"/>
+                        <outlet property="im9" destination="b3L-xd-wiO" id="O4H-LC-OFf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="129"/>
+        </scene>
+    </scenes>
+</document>
