@@ -12,10 +12,15 @@ extension CGFloat {
     static func *(lhs: CGFloat, rhs: Int) -> CGFloat {
         return lhs * CGFloat(rhs)
     }
+    static func /(lhs: CGFloat, rhs: Int) -> CGFloat {
+        return lhs / CGFloat(rhs)
+    }
 }
 
 extension UIImage {
-    func divideIntoNine() -> [UIImage] {
+    /// 'width'' is the number of images along one axis
+    /// ex: a width of 3 returns 9 images
+    func divide(width w: Int) -> [UIImage] {
         let sz = self.size
         var images = [UIImage]()
         
@@ -33,9 +38,9 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         // 2. Draw the divided square from that image
-        width = width / 3.0
-        for i in 0..<3 {
-            for j in 0..<3 {
+        width = width / w
+        for i in 0..<w {
+            for j in 0..<w {
                 UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: width),false, 0)
                 let point = CGPoint(x: -(width * j),
                                     y: -(width * i))

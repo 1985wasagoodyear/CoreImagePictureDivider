@@ -10,12 +10,14 @@
  1 2 3
  4 5 6
  7 8 9
- 
  */
+
 import UIKit
 
-class ImageGridViewController: UIViewController {
+final class ImageGridViewController: UIViewController {
 
+    // MARK: - Storyboard Outlets
+    
     @IBOutlet var im1: UIImageView!
     @IBOutlet var im2: UIImageView!
     @IBOutlet var im3: UIImageView!
@@ -26,11 +28,32 @@ class ImageGridViewController: UIViewController {
     @IBOutlet var im8: UIImageView!
     @IBOutlet var im9: UIImageView!
     
+    // MARK: - Custom Action Methods
+    
     @IBAction func uploadButtonAction(_ sender: Any) {
         let imPicker = UIImagePickerController()
         imPicker.delegate = self
         imPicker.sourceType = .photoLibrary
         present(imPicker, animated: true, completion: nil)
+    }
+    
+    // MARK: - Touch Override
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        let rot = CABasicAnimation(keyPath: "transform.rotation")
+        rot.duration = 5
+        rot.fromValue = 0.0
+        rot.toValue = (.pi * 2.0) * 5.0
+        im1.layer.add(rot, forKey: "rot")
+        im2.layer.add(rot, forKey: "rot")
+        im3.layer.add(rot, forKey: "rot")
+        im4.layer.add(rot, forKey: "rot")
+        im5.layer.add(rot, forKey: "rot")
+        im6.layer.add(rot, forKey: "rot")
+        im7.layer.add(rot, forKey: "rot")
+        im8.layer.add(rot, forKey: "rot")
+        im9.layer.add(rot, forKey: "rot")
     }
     
     // MARK: - Utility Methods
@@ -62,17 +85,21 @@ extension ImageGridViewController: UIImagePickerControllerDelegate, UINavigation
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // dismiss the picker when done
         defer { picker.dismiss(animated: true, completion: nil) }
+        
+        // fill the imageViews with a split image, if one exists
         guard let data = info[.originalImage],
             let im = data as? UIImage else {
             emptyAll()
             return
         }
-        let croppedImages = im.divideIntoNine()
+        let croppedImages = im.divide(width: 3)
         fill(with: croppedImages)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        emptyAll()
+        picker.dismiss(animated: true, completion: nil)
     }
+
 }
